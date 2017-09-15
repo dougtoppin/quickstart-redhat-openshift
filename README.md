@@ -43,12 +43,21 @@ Now get a list of what is available to you with this
 The output may include a number of sections.
 If the output includes something like ```Red Hat OpenShift Enterprise``` then look for something after it called ```Pool ID: xxx```.
 If you see that value keep it for use with the CloudFormation stack that you will be launching.
-If you do not see anything like the above you will not be able to use this Quick Start.
+You also need to confirm that you have ```Entitlements Available```.
+If that value is zero or does not appear at all that you may not be able to use the Quick Start.
+
 
 Once you are finished with determining what you need you can unregister the host and then terminate the instance.
 Unregister the instance with this
 
     $ sudo subscription-manager unregister
+
+**Important**
+This Quick Start will allocate from your subscription entitlements.
+Before you use this ensure that you will not be taking them away from a pool that needs to be available for your company usage. 
+
+
+It is a good idea to go to your Red Hat account portal and ensure that your hosts and subscription entitlements have been removed after you are finished with this exercise and your instances have been terminated.
 
 If you do not already have access to a Red Hat account then go to the following to register and get access
 

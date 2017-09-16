@@ -20,17 +20,20 @@ You can also use the AWS CloudFormation templates as a starting point for your o
 For architectural details, best practices, step-by-step instructions, and customization options, see the [deployment guide](https://s3.amazonaws.com/quickstart-reference/redhat/openshift/latest/doc/red-hat-openshift-on-the-aws-cloud.pdf).
 
 To post feedback, submit feature ideas, or report bugs, use the **Issues** section of this GitHub repo.
-If you'd like to submit code for this Quick Start, please review the [AWS Quick Start Contributor's Kit](https://aws-quickstart.github.io/). 
+If you'd like to submit code for this Quick Start, please review the [AWS Quick Start Contributor's Kit](https://aws-quickstart.github.io/).
 
 
 ## Usage
-Using this Quick Start requires credentials for a Red Hat account that includes a subscription for Red Hat OpenShift Enterprise (note that that may require a non-personal email address registration).
+Using this Quick Start requires credentials for a Red Hat account that includes a subscription for Red Hat OpenShift Enterprise.
 
 The default provisioning in this Quick Start will launch 10 m4.xlarge EC2 instances (3 masters, 3 workers, 3 etcd nodes and 1 ansible configuration server).
+Note that these instances cost $0.20 an hour at this time which works out to more than $40 per day so don't do this casually.
 
-If you have a Red Hat account and do not have easy access to the Red Hat subscription manager you can launch an RHEL instance in the AWS to determine if your account includes the necessary subscription and associated Pool ID.
+You may be able to view your subscriptions via your Red Hat account portal.
+If you have a Red Hat account and do not have easy access to the Red Hat subscription manager or portal you can launch an RHEL instance in the AWS to determine if your account includes the necessary subscription and then get the associated Pool ID from it.
 
-Launch an RHEL instance and do the following on it to access your account
+
+If you want to Launch an RHEL instance then do the following on it to access your account
 
     $ sudo subscription-manager register
 
@@ -54,16 +57,11 @@ Unregister the instance with this
 
 **Important**
 This Quick Start will allocate from your subscription entitlements.
-Before you use this ensure that you will not be taking them away from a pool that needs to be available for your company usage. 
+Before you use this ensure that you will not be taking them away from a pool that needs to be available for your company usage.
 
 
 It is a good idea to go to your Red Hat account portal and ensure that your hosts and subscription entitlements have been removed after you are finished with this exercise and your instances have been terminated.
 
-If you do not already have access to a Red Hat account then go to the following to register and get access
+If you do not already have access to a Red Hat account then go to the following to register and get access (note that that may require a non-personal email address for registration)
 
 [https://www.redhat.com/wapps/eval/index.html?evaluation_id=1026](https://www.redhat.com/wapps/eval/index.html?evaluation_id=1026)
-
-
-
-
-
